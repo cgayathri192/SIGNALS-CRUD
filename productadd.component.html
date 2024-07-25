@@ -1,0 +1,39 @@
+<form class="card" [formGroup]="productform" (ngSubmit)="AddProduct()">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label>Product</label>
+            <select class="form-control" formControlName="code" (change)="productchange($event)">
+              <option value="">Select Product</option>
+              <option value="p001">Rice 25Kg</option>
+              <option value="p002">Sugar</option>
+              <option value="p003">Coconut Oil 1L</option>
+              <option value="p004">Maida</option>
+              <option value="p005">DairyMilk</option>
+              <option value="p006">Maggi</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="form-group">
+            <label>Qty</label>
+            <input class="form-control" formControlName="qty">
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" formControlName="price">
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="form-group">
+            <br>
+            <button type="submit" class="btn btn-primary">{{ btntext }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
